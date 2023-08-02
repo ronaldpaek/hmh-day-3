@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  background: -webkit-linear-gradient(#2e2157, #813939);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header {
+  background-color: #407787;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.justify-center {
+  justify-content: center;
+}
+
+.flex.flex-end {
+  justify-content: flex-end;
+}
+
+.flex.flex-col {
+  flex-direction: column;
+}
+
+.flex.justify-around {
+  justify-content: space-around;
+}
+
+.flex.justify-between {
+  justify-content: space-between;
+}
+
+footer {
+  text-align: center;
+  background-color: #e4b3a5;
+  font-size: 18px;
+  margin-top: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding-block: 36px;
+}
+
+.main-wrapper {
+  max-width: 90%;
+  margin-inline: auto;
+  background-color: rgb(226, 226, 226);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main-wrapper p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.main-wrapper li {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper li > * + * {
+  margin-top: 16px;
+}
+
+.main-wrapper > li + li {
+  margin-top: 8px;
+  border-top: 1px solid black;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #407787;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+li:not(:first-of-type) .circle {
+  margin-top: 8px;
+}
+
+li .flex:first-of-type {
+  align-items: center;
+}
+
+.answer {
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: -webkit-linear-gradient(#2e2157, #813939);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.question {
+  opacity: 1;
+  transition: opacity 0.5s;
+  font-size: 24px;
+}
+
+.main-wrapper li:hover .answer {
+  opacity: 1;
+}
+
+.main-wrapper li:hover .question {
+  opacity: 0;
+}
